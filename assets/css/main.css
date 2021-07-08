@@ -160,6 +160,12 @@ input, select, textarea {
 			border-bottom-color: transparent;
 			color: #ffffff;
 		}
+		
+		a.icon:before,
+		.a.icon:before {
+			margin-right: 0.75em;
+		
+		}
 
 	strong, b {
 		color: #ffffff;
@@ -2645,10 +2651,26 @@ input, select, textarea {
 				padding: 0.5em 0;
 			}
 
-				ul.alt li:first-child {
-					border-top: 0;
-					padding-top: 0;
-				}
+			ul.alt li:first-child {
+				border-top: 0;
+				padding-top: 0;
+			}
+
+		ul.clear {
+			list-style: none;
+			font-size: small;
+			padding-left: 0;
+			margin: 0.25em 0 0.25em 0;
+		}
+		
+			ul.clear li {
+				padding: 0;
+			}
+
+			ul.clear li:first-child {
+				border-top: 0;
+				padding-top: 0;
+			}
 
 	dl {
 		margin: 0 0 2em 0;
