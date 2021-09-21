@@ -22,14 +22,136 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
+}
+
+img.emoji {
+	height: 1.5em;
+	max-height: 1.5em;
+	width: 1.5em;
+	max-width: 1.5em;
+	vertical-align:sub;
+	margin-right: 0.5em;
+}
+
+div.location {
+	position: relative;
+	align-items: center;
+	font-size: smaller;
+}
+
+div.name {	
+	color: white;
+	float: inline;
+	font-size: larger;
+	font-weight: lighter;
+	margin-bottom: 8px;
+}
+
+div.website {
+	position: relative;
+	align-items: center;
+	font-size: smaller;
+	vertical-align: bottom;
+	align-self: baseline;
+	padding-top: 8pt;
+	margin-top: 8pt;
+	border-top-width: 1pt;
+	border-top-style: groove;
+	border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+div.links {
+	float: right;
+	margin-right: 8pt;
+	margin-bottom: 8pt;
+}
+
+div.company-experience {
+	vertical-align: top;
+	margin-bottom: 8pt;
+}
+
+span.prefix {
+	margin-right: 0.75em;
+}
+
+span.postfix {
+	margin-left: 0.75em;
+}
+
+span.name {
+	color: white;
+	float: inline;
+	font-size: larger;
+	font-weight: lighter;
+	margin-bottom: 8px;
+}
+
+span.link {
+	vertical-align: baseline;
+	color: inherit;
+	height: auto;
+	font-size: smaller;
+	font-weight: normal; 
+	background-color: rgba(255, 255, 255, 0.05);
+	margin-right: 6pt;
+	padding: 4pt 8pt;
+	border: rgba(255, 255, 255, 0.15);
+	border-width: 1pt;
+	border-style: solid;
+	border-radius: 3pt;
+}
+
+span.label {
+	vertical-align: baseline;
+	color: inherit;
+	height: auto;
+	font-size: small;
+	font-weight: normal; 
+	background-color: rgba(255, 255, 255, 0.05);
+	margin-right: 4pt;
+	padding: 2pt 6pt;
+	border: rgba(255, 255, 255, 0.15);
+	border-width: 1pt;
+	border-style: solid;
+	border-radius: 3pt;
+}
+
+span.tag {
+	vertical-align: middle;
+	color: inherit;
+	font-size: small;
+	font-weight: normal; 
+	background-color: rgba(255, 255, 255, 0.05);
+	margin: 3pt;
+	margin-left: 6pt;
+	padding: 1pt 4pt;
+	border: rgba(255, 255, 255, 0.15);
+	border-width: 1pt;
+	border-style: solid;
+	border-radius: 3pt;
+}
+
+span.info {
+	background-color: #55aaff33; 
+	border-color: #55aaffaa; 
+	color: #55aaffff;
+}
+
+span.positive {
+	background-color: #33ff2533; 
+	border-color: #33ff25aa; 
+	color: #33ff25ff;
 }
 
 ol, ul {
@@ -159,6 +281,12 @@ input, select, textarea {
 		a:hover {
 			border-bottom-color: transparent;
 			color: #ffffff;
+		}
+		
+		a.icon:before,
+		.a.icon:before {
+			margin-right: 0.75em;
+		
 		}
 
 	strong, b {
@@ -310,10 +438,17 @@ input, select, textarea {
 		border-bottom: solid 1px rgba(255, 255, 255, 0.15);
 		margin: 2em 0;
 	}
+		
+		hr.minor {
+			border: 0;
+			border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+			margin: 0.5em 0;
+		}
 
 		hr.major {
 			margin: 3em 0;
 		}
+
 
 	.align-left {
 		text-align: left;
@@ -2295,12 +2430,12 @@ input, select, textarea {
 		}
 
 	label {
+		display: block;
 		color: #ffffff;
 		font-weight: bold;
-		line-height: 1.5;
-		margin: 0 0 0.7em 0;
-		display: block;
 		font-size: 1.1em;
+		margin: 0 0 0.7em 0;
+		line-height: 1.5;
 	}
 
 	input[type="text"],
@@ -2489,6 +2624,14 @@ input, select, textarea {
 		border-bottom: none;
 		position: relative;
 	}
+	
+		.icon.prefix {
+			margin-right: 0.5em;
+		}
+
+		.icon.postfix {
+			margin-left: 0.5em;
+		}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2645,10 +2788,26 @@ input, select, textarea {
 				padding: 0.5em 0;
 			}
 
-				ul.alt li:first-child {
-					border-top: 0;
-					padding-top: 0;
-				}
+			ul.alt li:first-child {
+				border-top: 0;
+				padding-top: 0;
+			}
+
+		ul.clear {
+			list-style: none;
+			font-size: small;
+			padding-left: 0;
+			margin: 0.25em 0 0.25em 0;
+		}
+		
+			ul.clear li {
+				padding: 0;
+			}
+
+			ul.clear li:first-child {
+				border-top: 0;
+				padding-top: 0;
+			}
 
 	dl {
 		margin: 0 0 2em 0;
@@ -3154,6 +3313,7 @@ input, select, textarea {
 			}
 
 		table td {
+			vertical-align: top;
 			padding: 0.75em 0.75em;
 		}
 
@@ -3907,3 +4067,5 @@ input, select, textarea {
 			}
 
 		}
+
+		
