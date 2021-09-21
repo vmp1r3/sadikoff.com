@@ -37,7 +37,8 @@ body {
 img.emoji {
 	height: 1.5em;
 	max-height: 1.5em;
-	width: auto;
+	width: 1.5em;
+	max-width: 1.5em;
 	vertical-align:sub;
 	margin-right: 0.5em;
 }
